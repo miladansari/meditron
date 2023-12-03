@@ -108,7 +108,11 @@ def infer_ndocs(cmd: list[str], autoaccept_iters: bool = True) -> int:
     if autoaccept_iters or input(f"Accept {n_docs} documents? (y/n) ") != "n":
         return n_docs
     return int(input("Now enter number of documents manually: "))
+  
 
+
+
+  
 
 def finetune(args: Namespace, data_path: Path, val_path: Path, out: Path):
     load_check = out.exists() and len(list(out.glob("iter*"))) > 0
